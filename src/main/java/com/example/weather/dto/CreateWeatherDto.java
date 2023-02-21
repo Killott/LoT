@@ -1,21 +1,11 @@
-package com.example.weather;
+package com.example.weather.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity
 @Data
-@RequiredArgsConstructor
-@Table(name = "weather")
-public class Weather {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class CreateWeatherDto {
 
     @Column(name = "temperature")
     private Double temperature;

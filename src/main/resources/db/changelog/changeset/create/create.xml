@@ -17,6 +17,12 @@
             <column name="temperature" type="DOUBLE"/>
             <column name="node" type="BIGINT"/>
         </createTable>
+        <createTable tableName="room">
+            <column name="id" type="bigserial">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR"/>
+        </createTable>
     </changeSet>
 
 
