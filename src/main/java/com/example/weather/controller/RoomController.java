@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/room")
 @RequiredArgsConstructor
@@ -21,8 +23,8 @@ public class RoomController {
     }
 
     @GetMapping("/getAll")
-    public Room getRoomAll(@RequestParam Long id) {
-        return roomRepository.getReferenceById(id);
+    public List<Room> getRoomAll() {
+        return roomRepository.getAll();
     }
 
     @PutMapping("/rename")
