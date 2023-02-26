@@ -24,7 +24,7 @@ public class RoomController {
 
     @GetMapping("/getAll")
     public List<Room> getRoomAll() {
-        return roomRepository.getAll();
+        return roomRepository.findAll();
     }
 
     @PutMapping("/rename")
