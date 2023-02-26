@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface WeatherRepository  extends JpaRepository<Weather, Long> {
 
-    Weather findTopByIdOrderByIdDesc(Long nodeId);
+    Weather findTopByNodeIdOrderByIdDesc(Long nodeId);
 
     List<Weather> findAllByNodeId(Long roomId);
 }

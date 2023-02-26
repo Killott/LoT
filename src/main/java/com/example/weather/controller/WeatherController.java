@@ -24,7 +24,7 @@ public class WeatherController {
 
     @GetMapping("/getNow")
     public Weather getNowWeather(@RequestParam Long roomId) {
-        return weatherRepository.findTopByIdOrderByIdDesc(roomId);
+        return weatherRepository.findTopByNodeIdOrderByIdDesc(roomId);
     }
 
     @GetMapping("/getAll")
